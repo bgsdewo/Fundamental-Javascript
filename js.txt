@@ -1,0 +1,17 @@
+operator pembanding
+>   : lebih dari
+<   :kurang dari
+>=  : lebih dari sama dengan
+<=  : kurang dari sama dengan
+==  : bernilai sama dengan
+!=  : bernilai tidak sama dengan
+===  : bernilai sama dan sejenis
+!==  : tidak sama dan sejenis
+
+
+perbedaan dari == dengan ===
+== digunakan hanya memeriksa nilainya saja bukan dengan tipe data
+!= sama aja kaya (==) dia hanya memeriksa tipe data
+Sedangkan 
+=== dia meemriksa tipe data sekaligus nilainya
+!== sama dengan(===) dia memeriksa tipe data sekaligus nilainya
