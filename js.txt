@@ -15,3 +15,4 @@ perbedaan dari == dengan ===
 Sedangkan 
 === dia meemriksa tipe data sekaligus nilainya
 !== sama dengan(===) dia memeriksa tipe data sekaligus nilainya
+
