@@ -1,42 +1,102 @@
-// console.log('contoh penggunaan dari perulangan for')
+//Belajar perulangan While
 
-// for (let i = 20;i>= 0;i--) {
-//     console.log('Ini contoh pengurangan')
+//Perulangan while akan terus berjalan selama kondisi tesnya bernilai true
+
+// let num = 0;
+// while(num <  0 ) {
+//     console.log(num)
+//     num++
 // }
 
-// for (let i = 0; i<= 20; i++) {
-//     console.log('ini contoh penambahan')
+// //contoh lain dari perulangan while
+// const password = 'Pass123'
+
+// let guess = prompt('Enter the password')
+
+// while(guess !== password) {
+//     console.log('enter the password ')
+// }
+// alert('congrats! the password is correct')
+
+//contoh penggunaan break dalam perulangan
+// let input = prompt('Say Something Please!')
+// while(true) {
+//     input = prompt(input);
+//     if(input ==='stop') break;
 // }
 
+// alert('ok');
 
-// //setiap melakukan perulangan dengan array,selalu awali nilai dengan 0 dan batasnya sampai panjangnya suatu data array yg akan digunakan
-// const animals = ['Serigala','Macan','Singa','Burung']
-
-// for (let i= 0; i<animals.length;i++) {
-//     console.log(i+1,animals[i])
+//contoh pada for
+// for(let i = 0; i < 100; i++) {
+//     console.log(i);
+//     if(i >= 50) break;
 // }
 
-// //contoh penggunaan dari nested loop 
-// let soal = ['A','B','C','D','E']
-// for (let i = 1; i <10; i++) {
-//     console.log(`${i} ini adalah soal nomor ${i}`)
-//     for(let j = 0; j<soal.length; j++) {
-//         console.log(`  ${soal[j]}. Pilihan jawaban`)
+//MEMBUAT GAME SEDERHANA MENGGUNAKAN PERULANGAN
+// let maximum = parseInt(prompt('Masukan nilai maksimum anda!'))
+// while(!maximum) {
+//     maximum= parseInt(prompt('jangan kosongkan nilai maksimal anda!'))
+// }
+
+// const targetNum = Math.floor(Math.random() * maximum) + 1;
+// console.log(targetNum)
+
+// let guess = parseInt(prompt('Isi tebakan angka menurut kamu!'))
+// let attemps = 1;
+// while(parseInt(guess)!==targetNum) {
+//     attemps++
+//     if(guess > targetNum) {
+//         guess = parseInt(prompt('Terlalu tinggi!tebak lagi'))
+//     } else{
+//         guess = parseInt(prompt('Terlalu rendah!tebak lagi'))
 //     }
 // }
 
-//CARA MEMANFAATKAN ARRAY DALAM ARRAY DENGAN NESTED LOOP
+// alert(`Selamat tebakan kamu berhasil,dan kamu menebak dengan percobaan ${attemps}`)
 
-const studentRow = [
-    ['Syifa','Mikael','Naruto'],
-    ['Milo','Mikel','Ruto'],
-    ['Yifa','Mika','Nato']
-]
 
-for(let i  = 0;i < studentRow.length;i++){
-    const row = studentRow[i];
-    console.log(`Seat row ${studentRow}`)
-    for(let j = 0; j<row.length;j++){
-        console.log(` ${row[j]}`)
-    }
+
+//cara lebih baik dan mudah untuk melakukan perulangan dengan tipe data array 
+
+//case 1 
+// const fruits = ['Banana','orange','Apple','Mango']
+
+// for (let fruit of fruits) {
+//     console.log(`Buah ${fruit}`)
+// }
+
+//case 2 nested array
+
+// const studentRows = [
+//     ['Mikael','Subaki','Hara','Sino'],
+//     ['kael','baki','ra','no'],
+//     ['Mik','Suaki','ara','ino']
+// ]
+
+// for(let row of studentRows) {
+//     for(let student of row) {
+//         console.log(student)
+//     }
+// }
+
+//cara lebih baik dan mudah untuk melakukan perulangan dengan tipe data object
+
+const studentScore = {
+    olivia: 10,
+    sasuke: 20,
+    chisandra: 30,
+    chitato: 40,
+    Neji: 50,
 }
+
+// for (let student in studentScore) {
+//     console.log(`${student} memiliki skor ${studentScore[student]}`)
+// }
+
+let total = 0;
+let scores = Object.values(studentScore);
+for (let score of scores) {
+    total += score;
+}
+console.log(total / scores.length)
